@@ -6,11 +6,11 @@ const port = 3000;
 
 
 //Not used, but universally handy. Just in case. 
-app.use(express.json());
+polo.use(express.json());
 
 
-app.get('/marco', (request, response) => {response.status(200).send('Polo!')});
+polo.get('/marco', (request, response) => {response.status(200).send('Polo!')});
 
-app.listen(port, () => {
+polo.listen(port, () => {
     console.log('Server listening on port: ' + port);
 });
