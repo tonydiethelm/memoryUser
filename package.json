@@ -1,0 +1,19 @@
+{
+  "name": "polo",
+  "version": "1.0.0",
+  "description": "Testing for containers and kubernetes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonydiethelm/Polo.git"
+  },
+  "author": "Tony Diethelm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonydiethelm/Polo/issues"
+  },
+  "homepage": "https://github.com/tonydiethelm/Polo#readme"
+}
