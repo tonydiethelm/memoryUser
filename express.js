@@ -9,7 +9,9 @@ const port = 3000;
 polo.use(express.json());
 
 
-polo.get('/marco', (request, response) => {response.status(200).send('Polo!')});
+polo.get('/marco', (request, response) => {
+    console.log('Marco? Polo!');
+    response.status(200).json('Polo!')});
 
 polo.listen(port, () => {
     console.log('Server listening on port: ' + port);
