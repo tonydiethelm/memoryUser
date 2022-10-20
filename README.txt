@@ -21,3 +21,28 @@ I might need to flag node to allow such large memory usage, as per one of the an
 const a = []
 for (let i = 0; i < numberAbove; i++)
     a.push(i)
+
+
+Problem, the V8 engine gets MAD when doing 1Gb or larger. 
+#
+# Fatal error in , line 0
+# Fatal JavaScript invalid size error 169220804
+#
+#
+#
+#FailureMessage Object: 0x7ffc5596ca40
+ 1: 0xbd6791  [node]
+ 2: 0x1df8664 V8_Fatal(char const*, ...) [node]
+ 3: 0xeea968  [node]
+ 4: 0x10988b2  [node]
+ 5: 0x1098b72  [node]
+ 6: 0x12a76fb v8::internal::Runtime_GrowArrayElements(int, unsigned long*, v8::internal::Isolate*) [node]
+ 7: 0x16e8fb9  [node]
+Trace/breakpoint trap (core dumped)
+
+I think that's mad at the size of the array? 
+
+Though, according to an Oreilly book on Javascript, the max number of elements in an array is...4,294,967,295 elements. I'm nowhere near that number. 
+
+I'm going to do the 500Mb versions, several times. It works, I have other things to do. 
+I don't want them garbage collected immediately after eating the memory, so I'm going to put them in variables and reference them later with console logs. 
