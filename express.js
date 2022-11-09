@@ -14,8 +14,8 @@ app.get('/:memory', (request, response) => {
     
     
     console.log(`Ok, trying to burn ${memoryRequested}Mb...`);
-    const a = useMemory(memoryRequest * 1000000);
-    console.log(a[0]);
+    const a = useMemory(memoryRequested * 1000000);
+    console.log(a[a.length - 1]);
     response.status(200).json(`${memoryRequested}`)});
 
 app.listen(port, () => {
