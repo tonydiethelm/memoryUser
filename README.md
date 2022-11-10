@@ -6,3 +6,4 @@ This was built to test alerts on containerized systems.
 
 For example, if memory was limited to 500Mb in a Kubernetes pod, putting this in the pod and sending a POST to X:3002/600 should force an OOMKill. 
 
+It will need to be containerized per your standard process and deployed. 
